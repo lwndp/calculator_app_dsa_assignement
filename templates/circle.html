@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+{% block content %}
+	<h1>Circle Calculator</h1>
+    <h2 class="subheading">Calculate the area and circumference of a circle based on its radius</h2>
+    <form method="post">
+        <input type="text" name="radius" placeholder="Enter the circle radius" required="required" />
+        <button type="submit">Calculate</button>
+    </form>
+
+    <br>
+    
+    {% if error %}
+        <div class="error">
+            <p>{{ error }}</p>
+        </div>
+    {% endif %}
+    
+    {% if result %}
+        <div class="result">
+            <h3>Results for circle with radius {{ result.radius }}:</h3>
+            <table border="0.5">
+                <tr>
+                    <th>Measurement</th>
+                    <th>Value</th>
+                </tr>
+                <tr>
+                    <td>Circumference</td>
+                    <td>{{ result.perimeter }}</td>
+                </tr>
+                <tr>
+                    <td>Area</td>
+                    <td>{{ result.area }}</td>
+                </tr>
+            </table>
+        </div>
+    {% endif %}
+    
+
+{% endblock %}

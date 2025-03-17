@@ -97,3 +97,35 @@ button {
 button:hover {
     background-color: #23272b; /* Slightly darker color on hover */
 }
+
+.subheading {
+    text-align: center;
+    font-size: 18px;
+    color: #6d6d6d; /* Dark neutral color for subheading */
+    font-weight: 100;
+}
+
+.result {
+    font-size: 18px;
+    color: #343a40; /* Dark neutral color for result */
+    text-align: center;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+/* Add this for the table inside the result div */
+.result table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.result table th,
+.result table td {
+    padding: 8px 12px;
+    border: 1px solid #dee2e6;
+}
+
+.result table th {
+    background-color: #f8f9fa;
+}
